@@ -1,0 +1,13 @@
+server:
+  port: 8081
+  context-path: /client
+
+security:
+  oauth2:
+    client:
+      clientId: my-trusted-client
+      clientSecret: mysecret
+      accessTokenUri: http://localhost:8080/uaa/oauth/token
+      userAuthorizationUri: http://localhost:8080/uaa/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8080/uaa/profile
